@@ -32,7 +32,10 @@ public enum ErrorCode {
 
     // 카카오 로그인
     KAKAO_LOGIN_FAILED_EXCEPTION(HttpStatus.UNAUTHORIZED, "카카오 로그인에 실패했습니다."),
-    KAKAO_EMAIL_NOT_FOUND_EXCEPTION(HttpStatus.BAD_REQUEST, "카카오 계정에서 이메일을 가져올 수 없습니다.");
+    KAKAO_EMAIL_NOT_FOUND_EXCEPTION(HttpStatus.BAD_REQUEST, "카카오 계정에서 이메일을 가져올 수 없습니다."),
+
+    //권한 관련
+    FORBIDDEN_EXCEPTION(HttpStatus.FORBIDDEN, "해당 기능을 사용할 권한이 없습니다.");
 
     private final HttpStatus httpStatus;    // HTTP 상태 코드를 스프링에서 쉽게 작성하기 위한 enum값들의 모임
     private final String message;           // 에러 메세지
